@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "5596a063-9ef2-406d-8a4c-ff7d002f7f2b",
+		"name": "Activities API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34293732"
+	},
+	"item": [
+		{
+			"name": "Get_Activities",
+			"item": [
+				{
+					"name": "list_all_activities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Actvity count is 200\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(Object.keys(jsonData).length).to.eql(30);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{activities_url}}",
+							"host": [
+								"{{activities_url}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List All Activities Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{activities_url}}",
+									"host": [
+										"{{activities_url}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8; v=1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Apr 2024 14:04:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Activity 1\",\n        \"dueDate\": \"2024-04-28T15:04:36.8336052+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Activity 2\",\n        \"dueDate\": \"2024-04-28T16:04:36.8336077+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Activity 3\",\n        \"dueDate\": \"2024-04-28T17:04:36.8336082+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Activity 4\",\n        \"dueDate\": \"2024-04-28T18:04:36.8336084+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Activity 5\",\n        \"dueDate\": \"2024-04-28T19:04:36.8336088+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Activity 6\",\n        \"dueDate\": \"2024-04-28T20:04:36.8336093+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Activity 7\",\n        \"dueDate\": \"2024-04-28T21:04:36.8336096+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Activity 8\",\n        \"dueDate\": \"2024-04-28T22:04:36.8336099+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Activity 9\",\n        \"dueDate\": \"2024-04-28T23:04:36.8336102+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Activity 10\",\n        \"dueDate\": \"2024-04-29T00:04:36.8336106+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 11,\n        \"title\": \"Activity 11\",\n        \"dueDate\": \"2024-04-29T01:04:36.833611+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 12,\n        \"title\": \"Activity 12\",\n        \"dueDate\": \"2024-04-29T02:04:36.8336113+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 13,\n        \"title\": \"Activity 13\",\n        \"dueDate\": \"2024-04-29T03:04:36.8336115+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 14,\n        \"title\": \"Activity 14\",\n        \"dueDate\": \"2024-04-29T04:04:36.8336118+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 15,\n        \"title\": \"Activity 15\",\n        \"dueDate\": \"2024-04-29T05:04:36.8336121+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 16,\n        \"title\": \"Activity 16\",\n        \"dueDate\": \"2024-04-29T06:04:36.8336124+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 17,\n        \"title\": \"Activity 17\",\n        \"dueDate\": \"2024-04-29T07:04:36.8336127+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 18,\n        \"title\": \"Activity 18\",\n        \"dueDate\": \"2024-04-29T08:04:36.8336131+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 19,\n        \"title\": \"Activity 19\",\n        \"dueDate\": \"2024-04-29T09:04:36.8336133+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 20,\n        \"title\": \"Activity 20\",\n        \"dueDate\": \"2024-04-29T10:04:36.8336136+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 21,\n        \"title\": \"Activity 21\",\n        \"dueDate\": \"2024-04-29T11:04:36.8336138+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 22,\n        \"title\": \"Activity 22\",\n        \"dueDate\": \"2024-04-29T12:04:36.8336141+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 23,\n        \"title\": \"Activity 23\",\n        \"dueDate\": \"2024-04-29T13:04:36.8336144+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 24,\n        \"title\": \"Activity 24\",\n        \"dueDate\": \"2024-04-29T14:04:36.8336146+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 25,\n        \"title\": \"Activity 25\",\n        \"dueDate\": \"2024-04-29T15:04:36.8336149+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 26,\n        \"title\": \"Activity 26\",\n        \"dueDate\": \"2024-04-29T16:04:36.8336152+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 27,\n        \"title\": \"Activity 27\",\n        \"dueDate\": \"2024-04-29T17:04:36.8336154+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 28,\n        \"title\": \"Activity 28\",\n        \"dueDate\": \"2024-04-29T18:04:36.8336157+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 29,\n        \"title\": \"Activity 29\",\n        \"dueDate\": \"2024-04-29T19:04:36.833616+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 30,\n        \"title\": \"Activity 30\",\n        \"dueDate\": \"2024-04-29T20:04:36.8336162+00:00\",\n        \"completed\": true\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Create_Activity",
+			"item": [
+				{
+					"name": "create_activity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Created activity is set to 9\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.eql(9);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 9,\r\n  \"title\": \"{{$randomLoremWord}}\",\r\n  \"dueDate\": \"2024-04-28T14:05:02.393Z\",\r\n  \"completed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{activities_url}}",
+							"host": [
+								"{{activities_url}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create New Activity Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 9,\r\n  \"title\": \"{{$randomLoremWord}}\",\r\n  \"dueDate\": \"2024-04-28T14:05:02.393Z\",\r\n  \"completed\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{activities_url}}",
+									"host": [
+										"{{activities_url}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8; v=1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Apr 2024 14:06:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"title\": \"rerum\",\n    \"dueDate\": \"2024-04-28T14:05:02.393Z\",\n    \"completed\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get_Activity",
+			"item": [
+				{
+					"name": "get_activity_with_id_7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Returned activity id should be 7\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.eql(7);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{activities_url}}/7",
+							"host": [
+								"{{activities_url}}"
+							],
+							"path": [
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Activity Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{activities_url}}/7",
+									"host": [
+										"{{activities_url}}"
+									],
+									"path": [
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8; v=1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Apr 2024 14:07:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"title\": \"Activity 7\",\n    \"dueDate\": \"2024-04-28T21:07:28.855924+00:00\",\n    \"completed\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Update_Activity",
+			"item": [
+				{
+					"name": "update_activity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Activity title should be `Activity has been updated`\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.title).to.eql(\"Activity has been updated\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"title\": \"Activity has been updated\",\r\n    \"dueDate\": \"2024-04-28T21:07:28.855924+00:00\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{activities_url}}/7",
+							"host": [
+								"{{activities_url}}"
+							],
+							"path": [
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Activity",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 7,\r\n    \"title\": \"Activity has been updated\",\r\n    \"dueDate\": \"2024-04-28T21:07:28.855924+00:00\",\r\n    \"completed\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{activities_url}}/7",
+									"host": [
+										"{{activities_url}}"
+									],
+									"path": [
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8; v=1.0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Apr 2024 14:09:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"title\": \"Activity has been updated\",\n    \"dueDate\": \"2024-04-28T21:07:28.855924+00:00\",\n    \"completed\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete_Activity",
+			"item": [
+				{
+					"name": "delete_activity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{activities_url}}/7",
+							"host": [
+								"{{activities_url}}"
+							],
+							"path": [
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "activities_url",
+			"value": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+			"type": "string"
+		}
+	]
+}
